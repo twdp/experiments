@@ -23,10 +23,13 @@ func main() {
 	args := &api.Args{
 		A: 10,
 		B: 20,
+		AAA: &api.AAA{
+			X: "xxx",
+		},
 	}
 
 	reply := &api.Reply{}
-	err := xclient.Call(context.Background(), "Mul2", args, reply)
+	err := xclient.Call(context.Background(), "Mul", args, reply)
 	if err != nil {
 		log.Fatalf("failed to call: %v", errors.WithStack(err))
 	}

@@ -23,6 +23,7 @@ func (t *Arith) Mul(ctx context.Context, args *api.Args, reply *api.Reply) error
 
 func (t *Arith) Mul2(ctx context.Context, args *api.Args, reply *api.Reply) error {
 	reply.C = args.A * args.B
+	fmt.Println(args.AAA.X)
 	fmt.Println("===")
 	return errors.New("22")
 }
